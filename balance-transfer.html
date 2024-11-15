@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенос баланса</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Боковая панель навигации -->
+    <div class="sidebar">
+        <h3>Меню</h3>
+        <a href="add-deposit.html">Внести новый депозит</a>
+        <a href="add-new-card.html">Добавить новую карту</a>
+        <a href="change-cstat.html">Поменять статус карты</a>
+        <a href="balance-transfer.html">Перенос баланса</a>
+        <a href="check-data.html">Проверить свод по промо</a>
+        <a href="rename-promo-hash.html">Изменение промо по хэшу</a>
+        <a href="refund-request.html">Запрос возврата</a>
+    </div>
+
+    <!-- Основное содержимое страницы -->
+    <div class="content">
+        <!-- Кнопка для возврата на главную страницу -->
+        <a href="index.html">
+            <button class="back-button">Вернуться на главную</button>
+        </a>
+
+        <h2>Перенос баланса</h2>
+        <form id="balanceTransferForm">
+           <label for="fromCard">Промо команды:</label>
+           <input type="text" id="fromCard" placeholder="Введите промокод" required><br>
+
+            <label for="fromCard">Карта с которой будет переноситья:</label>
+            <input type="text" id="fromCard" placeholder="Введите номер карты отправителя" required><br>
+
+            <label for="toCard">Карта на которую поступит перенос:</label>
+            <input type="text" id="toCard" placeholder="Введите номер карты получателя" required><br>
+
+            <label for="amount">Сумма перевода:</label>
+            <input type="text" id="amount" placeholder="Введите сумму перевода" required><br>
+
+            <button type="submit">Перевести баланс</button>
+        </form>
+    </div>
+</body>
+</html>

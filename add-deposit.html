@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление данных</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Вставка боковой панели -->
+  <div class="sidebar">
+      <h3>Меню</h3>
+      <a href="add-deposit.html">Внести новый депозит</a>
+      <a href="add-new-card.html">Добавить новую карту</a>
+      <a href="change-cstat.html">Поменять статус карты</a>
+      <a href="balance-transfer.html">Перенос баланса</a>
+      <a href="check-data.html">Проверить свод по промо</a>
+      <a href="rename-promo-hash.html">Изменение промо по хэшу</a>
+      <a href="refund-request.html">Запрос возврата</a>
+  </div>
+     
+    <!-- Основное содержимое страницы -->
+    <div class="content">
+        <!-- Кнопка для возвращения на главную страницу -->
+        <a href="index.html">
+            <button class="back-button">Вернуться на главную</button>
+        </a>
+
+        <h2>Добавление нового депозита в транзакции</h2>
+        <form id="dataForm">
+            <label for="name">HASH:</label>
+            <input type="text" id="hash" placeholder="Введите hash депозита" required><br>
+
+            <label for="email">Сумма пресланного USDT:</label>
+            <input type="text" id="token" placeholder="Введите количество полученых токенов" required><br>
+
+            <label for="phone">Курс откупа:</label>
+            <input type="text" id="currensy" placeholder="Введите курс закупа" required><br>
+
+            <label for="phone">ПРОМО:</label>
+            <input type="text" id="promo" placeholder="Введите промокод" required><br>
+
+            <label for="status">Валюта фиксации:</label>
+            <select id="status" required>
+                <option value="" disabled selected>Выберите статус</option>
+                <option value="ACTIVATED">USDT</option>
+                <option value="BLOCKED">RUB</option>
+            </select><br>
+
+            <button type="submit">Добавить данные о транзакции</button>
+        </form>
+    </div>
+</body>
+</html>

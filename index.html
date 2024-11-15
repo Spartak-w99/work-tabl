@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница приложения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Контейнер для боковой панели -->
+    <div id="sidebar-container"></div>
+
+    <!-- Основное содержимое страницы -->
+    <div class="content">
+        <h2>Добро пожаловать в приложение</h2>
+        <p>Это стартовая страница для работы с Google Таблицей.</p>
+
+        <!-- Кнопка для авторизации -->
+        <button class="auth-button">Войти с Google</button>
+
+        <p>Выберите функцию из меню слева, чтобы начать работу.</p>
+    </div>
+
+    <!-- JavaScript для подгрузки боковой панели -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("sidebar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("sidebar-container").innerHTML = data;
+                })
+                .catch(error => console.error('Ошибка загрузки боковой панели:', error));
+        });
+    </script>
+</body>
+</html>
